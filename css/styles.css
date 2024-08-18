@@ -847,16 +847,6 @@ address {
   margin-bottom: 16px;
 }
 
-/* Лейбел для коментаря */
-.modal-lable-comment {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  margin-bottom: 16px;
-}
-
 /* Поле вводу коментаря */
 .modal-textarea {
   display: block;
