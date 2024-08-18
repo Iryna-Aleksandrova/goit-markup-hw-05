@@ -662,12 +662,11 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
   gap: 16px;
   border-radius: 4px;
   min-width: 165px;
   height: 40px;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -677,7 +676,7 @@ address {
   color: #fff;
   cursor: pointer;
   border: none;
-  margin-right: 24px;
+  margin-left: 24px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -688,7 +687,7 @@ address {
 }
 
 .subscribe-icon {
-  margin-right: 16px;
+  text-align: center;
 }
 
 /* Модальне вікно */
@@ -699,6 +698,7 @@ address {
 
   width: 100%;
   height: 100%;
+  z-index: 999;
 
   background-color: rgba(46, 47, 66, 0.4);
 
@@ -753,11 +753,12 @@ address {
   padding: 0;
   cursor: pointer;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-button:hover {
+.close-button:hover,
+.close-button:focus {
   background-color: #404bbf;
   border: none;
   fill: #ffffff;
@@ -777,22 +778,22 @@ address {
 /* Модальний контейнер для вводу (div) */
 .form-container {
   position: relative;
+  margin-bottom: 8px;
 }
 
 /* Лейбел */
 .modal-lable {
-  display: flex;
+  display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
 }
 
 .modal-container {
-  width: 360px;
-  height: 58px;
+  position: relative;
 }
 
 /* Інпут */
@@ -860,12 +861,13 @@ address {
   height: 120px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
   resize: none;
   padding: 8px 16px;
   outline: transparent;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Текст для поля вводу коментаря */
@@ -882,6 +884,10 @@ address {
   border-color: #4d5ae5;
 }
 
+.checkbox-container {
+  margin-bottom: 24px;
+}
+
 .checkbox-span {
   display: inline-flex;
   justify-content: center;
@@ -893,14 +899,16 @@ address {
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-label {
   cursor: pointer;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -947,12 +955,8 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Стан при наведенні мишкою */
-.send-button:hover {
-  background-color: #404bbf;
-}
-
-/* Стан при фокусі (focus) */
+/* Стан при наведенні мишкою та при фокусі (focus) */
+.send-button:hover,
 .send-button:focus {
-  background-color: #404bbf; /* змінюється колір фону при фокусі */
+  background-color: #404bbf;
 }
